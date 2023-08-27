@@ -36,7 +36,7 @@ public class FetchData : MonoBehaviour
 
     IEnumerator getdata()
     {
-        
+        Debug.Log("Fetching Data");    
         using (UnityWebRequest request = UnityWebRequest.Get(URL))
         {
             yield return request.SendWebRequest();
@@ -51,6 +51,6 @@ public class FetchData : MonoBehaviour
                 fetched = true;   
             }
         }
-
+        Debug.Log("Fetching Done");
     }
 }
